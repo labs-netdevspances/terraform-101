@@ -6,3 +6,12 @@ resource "aws_s3_bucket" "mybucket" {
     Environment = "Dev"
   }
 }
+
+resource "aws_s3_bucket" "s3_bucket_test" {
+  bucket = "nelson237-123456"
+
+  tags = {
+    Name        = "My bucket"
+    Environment = "Dev"
+  }
+}
