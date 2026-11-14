@@ -1,5 +1,1 @@
-variable "server_name" {
-  description = "The name of the server"
-  type        = string
-  default     = "my-server"
-}
+### Deleting the VPC and Subnet resources
