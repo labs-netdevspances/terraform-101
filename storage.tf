@@ -8,8 +8,7 @@ resource "aws_s3_bucket" "mybucket" {
 }
 
 resource "aws_s3_bucket" "example" {
-  bucket = "s3_fixed_name0101"
-
+  bucket_prefix = "hertz-dev-bucket-" //the best thing to do is to use <bucket_prefix=""> command so terraform will generate a name automatically
   tags = {
     Name        = "Hertz Bucket"
     Environment = "Dev"
