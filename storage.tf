@@ -8,8 +8,7 @@ resource "aws_s3_bucket" "mybucket" {
 }
 
 resource "aws_s3_bucket" "example" {
-  bucket = "hertz-bucket-1"
-  acl    = "private"
+  bucket = "my-tf-test-bucket"
 
   tags = {
     Name        = "Hertz Bucket"
