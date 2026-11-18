@@ -7,11 +7,12 @@ resource "aws_s3_bucket" "mybucket" {
   }
 }
 
-resource "aws_s3_bucket" "s3_bucket_test" {
-  bucket = "nelson237-123456"
+resource "aws_s3_bucket" "example" {
+  bucket = "hertz-bucket-1"
+  acl    = "private"
 
   tags = {
-    Name        = "My bucket"
+    Name        = "Hertz Bucket"
     Environment = "Dev"
   }
 }
