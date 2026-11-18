@@ -18,3 +18,19 @@ resource "aws_subnet" "app" {
     Name = "${var.subnet_name}-${each.key}"
   }
 }
+
+resource "aws_subnet" "web01" {
+    vpc_id     = aws_vpc.vpc_lab.id
+    cidr_block = var.web01_cidr
+    tags = {
+      Name = "web01"
+    }
+}
+
+resource "aws_subnet" "database01" {
+    vpc_id     = aws_vpc.vpc_lab.id
+    cidr_block = var.database01_cidr
+    tags = {
+      Name = "database01"
+    }
+}
