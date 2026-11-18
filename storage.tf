@@ -8,7 +8,7 @@ resource "aws_s3_bucket" "mybucket" {
 }
 
 resource "aws_s3_bucket" "example" {
-  bucket = "my-tf-test-bucket"
+  bucket = "s3_fixed_name0101"
 
   tags = {
     Name        = "Hertz Bucket"
