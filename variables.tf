@@ -34,3 +34,15 @@ variable "subnets" {
     }
   }
 }
+
+variable "web01_cidr" {
+  description = "This CIDR Block is for the web01 subnet"
+  type        = string
+  default     = "10.220.100.0/25"
+}
+
+variable "database01_cidr" {
+  description = "This CIDR Block is for the database01 subnet"
+  type        = string
+  default     = "10.220.100.128/25"
+}
