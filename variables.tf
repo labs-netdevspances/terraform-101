@@ -10,3 +10,27 @@ variable "vpc_name" {
      type = string
      default = "vpc-net"
 }
+variable "subnet_name" {
+  description = "Préfixe du nom des subnets"
+  type        = string
+  default     = "subnet-net"
+}
+
+variable "subnets" {
+  description = "CIDR et zone de disponibilité de chaque subnet"
+  type = map(object({
+    cidr_block        = string
+    availability_zone = string
+  }))
+
+  default = {
+    web = {
+      cidr_block        = "10.220.100.0/26"
+      availability_zone = "ca-central-1a"
+    }
+    db = {
+      cidr_block        = "10.220.100.64/26"
+      availability_zone = "ca-central-1b"
+    }
+  }
+}
