@@ -69,7 +69,6 @@ variable "subnets_team3" {
 }
 
 ########## Fin De Variable Du Groupe 3 ###########
-=======
 
 variable "cird_block_groupe2" {
   description = "This CIDR Block is for the VPC"
