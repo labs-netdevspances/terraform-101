@@ -1,9 +1,9 @@
 ### Delete Network ###
 resource "aws_vpc" "vpc_lab" {
-    cidr_block = var.cidr_block
-    tags = {
-      Name=var.vpc_name
-    }
+  cidr_block = var.cidr_block
+  tags = {
+    Name = var.vpc_name
+  }
 }
 
 resource "aws_subnet" "app" {
@@ -20,17 +20,17 @@ resource "aws_subnet" "app" {
 }
 
 resource "aws_subnet" "web01" {
-    vpc_id     = aws_vpc.vpc_lab.id
-    cidr_block = var.web01_cidr
-    tags = {
-      Name = "web01"
-    }
+  vpc_id     = aws_vpc.vpc_lab.id
+  cidr_block = var.web01_cidr
+  tags = {
+    Name = "web01"
+  }
 }
 
 resource "aws_subnet" "database01" {
-    vpc_id     = aws_vpc.vpc_lab.id
-    cidr_block = var.database01_cidr
-    tags = {
-      Name = "database01"
-    }
+  vpc_id     = aws_vpc.vpc_lab.id
+  cidr_block = var.database01_cidr
+  tags = {
+    Name = "database01"
+  }
 }
