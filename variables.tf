@@ -46,6 +46,7 @@ variable "database01_cidr" {
   default     = "10.220.100.192/26"
 }
 
+
 ########## Variable Du Groupe 3  ############
 
 variable "vpc_name_team3" {
@@ -68,3 +69,45 @@ variable "subnets_team3" {
 }
 
 ########## Fin De Variable Du Groupe 3 ###########
+=======
+
+variable "cird_block_groupe2" {
+  description = "This CIDR Block is for the VPC"
+  type        = string
+  default     = "172.16.100.0/24"
+}
+variable "vpc_groupe2_name" {
+  description = "This is the VPC"
+  type        = string
+  default     = "vpc-groupe2"
+}
+
+variable "subnet_groupe2_web" {
+  description = ""
+  type        = string
+  default     = "subnet-groupe2_web"
+}
+
+variable "subnet_groupe2_db" {
+  description = ""
+  type        = string
+  default     = "subnet-groupe2_db"
+}
+variable "subnets_groupe2" {
+  description = "CIDR et zone de disponibilité de chaque subnet"
+  type = map(object({
+    cidr_block        = string
+    availability_zone = string
+  })) 
+ default = {
+    group2_web = {
+      cidr_block        = "172.16.100.0/26"
+      availability_zone = "ca-central-1a"
+    }
+    group2_db = {
+      cidr_block        = "172.16.100.64/26"
+      availability_zone = "ca-central-1b"
+    }
+  }
+}
+
