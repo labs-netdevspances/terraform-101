@@ -76,11 +76,11 @@ variable "subnets_groupe2" {
     availability_zone = string
   })) 
  default = {
-    web = {
+    group2_web = {
       cidr_block        = "172.16.100.0/26"
       availability_zone = "ca-central-1a"
     }
-    db = {
+    group2_db = {
       cidr_block        = "172.16.100.64/26"
       availability_zone = "ca-central-1b"
     }
