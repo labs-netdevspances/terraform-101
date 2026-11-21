@@ -10,8 +10,8 @@ resource "aws_vpc" "vpc_groupe2" {
 
 resource "aws_subnet" "subnet_groupe2_web" {
   vpc_id            = aws_vpc.vpc_groupe2.id
-  cidr_block        = var.subnets["web"].cidr_block
-  availability_zone = var.subnets["web"].availability_zone
+  cidr_block        = var.subnets_groupe2["group2_web"].cidr_block
+  availability_zone = var.subnets_groupe2["group2_web"].availability_zone
 
   tags = {
     Name = var.subnet_groupe2_web
@@ -20,8 +20,8 @@ resource "aws_subnet" "subnet_groupe2_web" {
 
 resource "aws_subnet" "subnet_groupe2_db" {
   vpc_id            = aws_vpc.vpc_groupe2.id
-  cidr_block        = var.subnets["db"].cidr_block
-  availability_zone = var.subnets["db"].availability_zone
+  cidr_block        = var.subnets_groupe2["group2_db"].cidr_block
+  availability_zone = var.subnets_groupe2["group2_db"].availability_zone
 
   tags = {
     Name = var.subnet_groupe2_db
