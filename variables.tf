@@ -45,3 +45,26 @@ variable "database01_cidr" {
   type        = string
   default     = "10.220.100.192/26"
 }
+
+########## Variable Du Groupe 3  ############
+
+variable "vpc_name_team3" {
+  description = "Nom du VPC"
+  type        = string
+}
+
+variable "vpc_cidr_team3" {
+  description = "CIDR du VPC"
+  type        = string
+}
+
+variable "subnets_team3" {
+  description = "Configuration des deux subnets"
+
+  type = map(object({
+    cidr_block        = string
+    availability_zone = string
+  }))
+}
+
+########## Fin De Variable Du Groupe 3 ###########
