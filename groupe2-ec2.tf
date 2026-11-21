@@ -3,6 +3,6 @@ resource "aws_instance" "ec2" {
   instance_type = "t3.micro"
   subnet_id     = "subnet_groupe2_web"
   tags = {
-    Name = "TEST-EC2"
+    Name = "goupe2-EC2"
   }
 }
